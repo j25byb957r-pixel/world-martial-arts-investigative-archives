@@ -1,4 +1,4 @@
-const CACHE_NAME='wmaia-v4';
+const CACHE_NAME='wmaia-v5';
 const CORE=[
   '/',
   '/index.html',
@@ -17,37 +17,19 @@ const CORE=[
   '/research/sanchin/07-pangainoon.html',
   '/research/sanchin/08-okinawan-development.html',
   '/research/sanchin/09-similarity-not-lineage.html',
+  '/research/topics/kanbun-uechi.html',
+  '/research/topics/fujian.html',
+  '/research/topics/history.html',
+  '/research/topics/sanchin.html',
+  '/research/topics/san-zhan.html',
+  '/research/topics/sam-chien.html',
+  '/research/video-evidence-sanchin.html',
   '/research/southern-white-crane-fujian.html',
   '/research/three-forward-three-back.html',
   '/research/uechi-ryu-lineage.html',
   '/research/michigan-uechi-lineage.html',
   '/research/source-claim-register.html'
 ];
-
-self.addEventListener('install',event=>{
-  event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()));
-});
-
-self.addEventListener('activate',event=>{
-  event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE_NAME).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));
-});
-
-self.addEventListener('fetch',event=>{
-  const request=event.request;
-  if(request.method!=='GET') return;
-  if(request.mode==='navigate'){
-    event.respondWith(fetch(request).then(response=>{
-      const copy=response.clone();
-      caches.open(CACHE_NAME).then(cache=>cache.put(request,copy));
-      return response;
-    }).catch(()=>caches.match(request).then(cached=>cached||caches.match('/offline.html'))));
-    return;
-  }
-  event.respondWith(caches.match(request).then(cached=>cached||fetch(request).then(response=>{
-    if(response && response.status===200 && response.type==='basic'){
-      const copy=response.clone();
-      caches.open(CACHE_NAME).then(cache=>cache.put(request,copy));
-    }
-    return response;
-  })));
-});
+self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()));});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE_NAME).map(key=>caches.delete(key)))).then(()=>self.clients.claim()));});
+self.addEventListener('fetch',event=>{const request=event.request;if(request.method!=='GET')return;if(request.mode==='navigate'){event.respondWith(fetch(request).then(response=>{const copy=response.clone();caches.open(CACHE_NAME).then(cache=>cache.put(request,copy));return response;}).catch(()=>caches.match(request).then(cached=>cached||caches.match('/offline.html'))));return;}event.respondWith(caches.match(request).then(cached=>cached||fetch(request).then(response=>{if(response&&response.status===200&&response.type==='basic'){const copy=response.clone();caches.open(CACHE_NAME).then(cache=>cache.put(request,copy));}return response;})));});
