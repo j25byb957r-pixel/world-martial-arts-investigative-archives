@@ -1,3 +1,4 @@
+# Production refresh marker: navigation + PWA deployment synchronization
 [build]
   publish = "."
 
