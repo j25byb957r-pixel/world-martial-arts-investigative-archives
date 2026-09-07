@@ -1,4 +1,4 @@
-const CACHE_NAME='wmaia-v10';
+const CACHE_NAME='wmaia-v11';
 const CORE=[
   '/',
   '/index.html',
