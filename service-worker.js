@@ -1,4 +1,4 @@
-const CACHE_NAME='wmaia-v5';
+const CACHE_NAME='wmaia-v6';
 const CORE=[
   '/',
   '/index.html',
@@ -23,6 +23,14 @@ const CORE=[
   '/research/topics/sanchin.html',
   '/research/topics/san-zhan.html',
   '/research/topics/sam-chien.html',
+  '/research/topics/seisan.html',
+  '/research/topics/sanseiryu.html',
+  '/research/topics/white-crane.html',
+  '/research/topics/wakayama.html',
+  '/research/topics/transmission.html',
+  '/research/topics/okinawa.html',
+  '/research/topics/kanei-uechi.html',
+  '/research/topics/pangainoon.html',
   '/research/video-evidence-sanchin.html',
   '/research/southern-white-crane-fujian.html',
   '/research/three-forward-three-back.html',
