@@ -1,4 +1,4 @@
-const CACHE_NAME='wmaia-v6';
+const CACHE_NAME='wmaia-v7';
 const CORE=[
   '/',
   '/index.html',
@@ -17,6 +17,7 @@ const CORE=[
   '/research/sanchin/07-pangainoon.html',
   '/research/sanchin/08-okinawan-development.html',
   '/research/sanchin/09-similarity-not-lineage.html',
+  '/research/topics/index.html',
   '/research/topics/kanbun-uechi.html',
   '/research/topics/fujian.html',
   '/research/topics/history.html',
