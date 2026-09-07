@@ -1,107 +1,69 @@
 # World Martial Arts Investigative Archives
 
-A comprehensive archive for researching and documenting martial arts history, techniques, and investigative analysis.
+A public, source-conscious research archive for investigating martial arts history, lineages, forms, movement concepts, terminology, and cross-tradition comparisons.
 
-## Quick Start
+## Live Archive
 
-### Prerequisites
-- Git (for cloning and version control)
-- Node.js 18+ (if using JavaScript/TypeScript)
-- Python 3.8+ (if using Python)
-- Your preferred text editor or IDE
+The repository contains a lightweight public web application designed to be deployed directly from GitHub. The initial archive includes searchable research areas for Sanchin / Sam Chien, Uechi-Ryū lineage research, Southern White Crane comparisons, three-forward/three-back movement concepts, wauke/circular receiving, and a source-and-claim register.
 
-### Installation
+## Research Standard
 
-#### Option 1: Using Git (Recommended)
-```bash
-# Clone the repository
-git clone https://github.com/j25byb957r-pixel/world-martial-arts-investigative-archives.git
+The project keeps four things visibly distinct:
 
-# Navigate to the project directory
-cd world-martial-arts-investigative-archives
+1. **Documented evidence** — material supported directly by identifiable sources.
+2. **Practitioner testimony** — personal, lineage, or oral-history accounts attributed to their source.
+3. **Comparative analysis** — observed similarities and differences that do not by themselves establish common origin.
+4. **Working inquiry** — hypotheses and open questions awaiting stronger evidence.
 
-# Install dependencies (choose based on your tech stack)
-```
+The guiding process is: **Receive it. Examine it. Experience it. Question it. Cultivate understanding.**
 
-#### Option 2: Download ZIP
-1. Visit: https://github.com/j25byb957r-pixel/world-martial-arts-investigative-archives
-2. Click the green "Code" button
-3. Select "Download ZIP"
-4. Extract to your preferred location
+## Project Files
 
-### Project Structure
-
-```
+```text
 world-martial-arts-investigative-archives/
-├── README.md                 # This file
-├── CONTRIBUTING.md          # Contributing guidelines
-├── LICENSE                  # Project license
-├── docs/                    # Documentation
-├── src/                     # Source code
-├── data/                    # Research data and archives
-└── tests/                   # Test files
+├── index.html       # Public archive interface
+├── styles.css       # Responsive visual design
+├── app.js           # Searchable archive index
+├── README.md        # Project overview and workflow
+├── CONTRIBUTING.md  # Contribution guidance
+├── SETUP.md         # Local setup notes
+├── LICENSE          # MIT License
+└── .gitignore
 ```
 
-## Technology Stack
+## Git-Based Update Workflow
 
-This project supports multiple technology stacks. Choose based on your needs:
+The `main` branch is the authoritative public version. Changes committed to GitHub create a permanent revision history. Research additions should identify whether they are documented, comparative, testimony, or working inquiry before publication.
 
-### JavaScript/TypeScript
+Recommended workflow:
+
 ```bash
-npm install
-npm run dev      # Start development server
-npm run build    # Build for production
-npm test         # Run tests
+git pull
+git checkout -b research/topic-name
+# make and review changes
+git add .
+git commit -m "Add research on topic name"
+git push -u origin research/topic-name
 ```
 
-### Python
-```bash
-pip install -r requirements.txt
-python app.py    # Run application
-pytest           # Run tests
-```
+For direct maintenance through the connected GitHub workflow, reviewed changes can also be committed to `main` when appropriate.
 
-### General Commands
-```bash
-git status       # Check repository status
-git add .        # Stage changes
-git commit -m "message"  # Commit changes
-git push         # Push to remote
-```
+## Deployment
 
-## Features
+A Netlify project named `world-martial-arts-investigative-archives` exists for the public application. The web application is intentionally static so it can be deployed without a database, API keys, or private user information.
 
-- 📚 Comprehensive martial arts research archive
-- 🔍 Investigative analysis tools
-- 📊 Data organization and visualization
-- 🌍 Multi-language support
-- 🤝 Community contributions welcome
+## Contribution Principles
 
-## Contributing
+Contributions should preserve historical context, cite sources where possible, distinguish fact from interpretation, avoid presenting movement similarity as automatic proof of lineage, and leave unresolved questions open rather than forcing certainty.
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for additional guidance.
 
 ## License
 
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
+This repository is released under the [MIT License](LICENSE).
 
-## Support
+## Maintainer
 
-For issues, questions, or suggestions, please:
-1. Check existing [Issues](https://github.com/j25byb957r-pixel/world-martial-arts-investigative-archives/issues)
-2. Create a new issue with detailed information
-3. Contact the maintainers
+Repository: `j25byb957r-pixel/world-martial-arts-investigative-archives`
 
-## Roadmap
-
-- [ ] Initial project setup
-- [ ] Core data structures
-- [ ] Research documentation
-- [ ] Community guidelines
-- [ ] CI/CD pipeline
-- [ ] Deployment strategy
-
----
-
-**Last Updated**: 2026-09-07  
-**Maintainer**: j25byb957r-pixel
+Established: September 7, 2026
