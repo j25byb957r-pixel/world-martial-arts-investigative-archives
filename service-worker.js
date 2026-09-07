@@ -1,4 +1,4 @@
-const CACHE_NAME='wmaia-v3';
+const CACHE_NAME='wmaia-v4';
 const CORE=[
   '/',
   '/index.html',
@@ -8,6 +8,15 @@ const CORE=[
   '/icon.svg',
   '/offline.html',
   '/research/sanchin-sam-chien.html',
+  '/research/sanchin/01-kanbun-fujian.html',
+  '/research/sanchin/02-san-zhan-terminology.html',
+  '/research/sanchin/03-core-curriculum.html',
+  '/research/sanchin/04-forward-backward.html',
+  '/research/sanchin/05-fujian-family-resemblance.html',
+  '/research/sanchin/06-white-crane-comparison.html',
+  '/research/sanchin/07-pangainoon.html',
+  '/research/sanchin/08-okinawan-development.html',
+  '/research/sanchin/09-similarity-not-lineage.html',
   '/research/southern-white-crane-fujian.html',
   '/research/three-forward-three-back.html',
   '/research/uechi-ryu-lineage.html',
