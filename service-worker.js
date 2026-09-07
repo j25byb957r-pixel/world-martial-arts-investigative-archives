@@ -1,4 +1,4 @@
-const CACHE_NAME='wmaia-v1';
+const CACHE_NAME='wmaia-v2';
 const CORE=[
   '/',
   '/index.html',
@@ -8,6 +8,7 @@ const CORE=[
   '/icon.svg',
   '/offline.html',
   '/research/sanchin-sam-chien.html',
+  '/research/southern-white-crane-fujian.html',
   '/research/uechi-ryu-lineage.html',
   '/research/michigan-uechi-lineage.html',
   '/research/source-claim-register.html'
