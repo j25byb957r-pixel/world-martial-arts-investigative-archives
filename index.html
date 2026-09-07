@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="World Martial Arts Investigative Archives — a public research archive for martial arts history, forms, lineages, and source analysis." />
+  <meta name="theme-color" content="#20231d" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Martial Arts Archive" />
   <title>World Martial Arts Investigative Archives</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icon-180.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -31,8 +39,10 @@
           <p class="lead">A public, source-conscious archive for comparing traditions without flattening their differences. Entries distinguish documented evidence, practitioner testimony, interpretation, and open questions.</p>
           <div class="hero-actions">
             <a class="button primary" href="#archive">Explore the archive</a>
+            <button class="button" id="install-app" type="button" hidden>Install app</button>
             <a class="button" href="https://github.com/j25byb957r-pixel/world-martial-arts-investigative-archives">View the research repository</a>
           </div>
+          <p id="app-status" class="muted" aria-live="polite">Mobile app mode: preparing install and offline support.</p>
         </div>
         <aside class="principles" aria-label="Archive principles">
           <h2>Archive principles</h2>
@@ -57,27 +67,10 @@
         </div>
 
         <div class="controls" role="search">
-          <label>
-            <span>Search</span>
-            <input id="search" type="search" placeholder="Try Sanchin, White Crane, Uechi-Ryū…" autocomplete="off" />
-          </label>
-          <label>
-            <span>Category</span>
-            <select id="category">
-              <option value="all">All categories</option>
-            </select>
-          </label>
-          <label>
-            <span>Status</span>
-            <select id="status">
-              <option value="all">All statuses</option>
-              <option value="documented">Documented</option>
-              <option value="comparative">Comparative</option>
-              <option value="working">Working inquiry</option>
-            </select>
-          </label>
+          <label><span>Search</span><input id="search" type="search" placeholder="Try Sanchin, White Crane, Uechi-Ryū…" autocomplete="off" /></label>
+          <label><span>Category</span><select id="category"><option value="all">All categories</option></select></label>
+          <label><span>Status</span><select id="status"><option value="all">All statuses</option><option value="documented">Documented</option><option value="comparative">Comparative</option><option value="working">Working inquiry</option></select></label>
         </div>
-
         <div id="archive-grid" class="archive-grid"></div>
         <noscript><p class="notice">JavaScript is required for archive search and filtering. The research files remain available in the GitHub repository.</p></noscript>
       </div>
@@ -85,11 +78,7 @@
 
     <section id="method" class="section section-alt">
       <div class="wrap method-grid">
-        <div>
-          <p class="eyebrow">Investigative method</p>
-          <h2>Evidence before conclusion</h2>
-          <p>Each archive entry is designed to preserve the difference between what a source explicitly says, what practitioners report, what can be compared through movement or terminology, and what remains a hypothesis.</p>
-        </div>
+        <div><p class="eyebrow">Investigative method</p><h2>Evidence before conclusion</h2><p>Each archive entry is designed to preserve the difference between what a source explicitly says, what practitioners report, what can be compared through movement or terminology, and what remains a hypothesis.</p></div>
         <ol class="method-steps">
           <li><span>01</span><div><strong>Receive it</strong><p>Record the claim, form, text, oral history, or observation as accurately as possible.</p></div></li>
           <li><span>02</span><div><strong>Examine it</strong><p>Locate dates, lineages, translations, independent sources, and conflicting accounts.</p></div></li>
@@ -100,27 +89,10 @@
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="wrap about-grid">
-        <div>
-          <p class="eyebrow">About the project</p>
-          <h2>A living investigative archive</h2>
-        </div>
-        <div>
-          <p>This project is intended to organize martial arts research into a form that is useful to practitioners, historians, and curious readers. It does not present every tradition as identical and does not treat speculation as established history.</p>
-          <p>The public repository provides version history, contribution guidance, and transparent changes so that the archive itself has a research trail.</p>
-        </div>
-      </div>
-    </section>
+    <section id="about" class="section"><div class="wrap about-grid"><div><p class="eyebrow">About the project</p><h2>A living investigative archive</h2></div><div><p>This project is intended to organize martial arts research into a form that is useful to practitioners, historians, and curious readers. It does not present every tradition as identical and does not treat speculation as established history.</p><p>The public repository provides version history, contribution guidance, and transparent changes so that the archive itself has a research trail.</p></div></div></section>
   </main>
 
-  <footer>
-    <div class="wrap footer-inner">
-      <p>World Martial Arts Investigative Archives</p>
-      <p>Open-source research framework • MIT License</p>
-    </div>
-  </footer>
-
+  <footer><div class="wrap footer-inner"><p>World Martial Arts Investigative Archives</p><p>Installable research application • MIT License</p></div></footer>
   <script src="app.js" defer></script>
 </body>
 </html>
