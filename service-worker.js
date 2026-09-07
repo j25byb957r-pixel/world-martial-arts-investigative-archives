@@ -1,4 +1,4 @@
-const CACHE_NAME='wmaia-v8';
+const CACHE_NAME='wmaia-v9';
 const CORE=[
   '/',
   '/index.html',
@@ -7,6 +7,7 @@ const CORE=[
   '/manifest.webmanifest',
   '/icon.svg',
   '/offline.html',
+  '/research/explore.html',
   '/research/sanchin-sam-chien.html',
   '/research/sanchin/01-kanbun-fujian.html',
   '/research/sanchin/02-san-zhan-terminology.html',
